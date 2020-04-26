@@ -41,7 +41,8 @@ public class ComboSplit {
 		}
 		long endTime = System.nanoTime();
 		long durationInNano = (endTime - startTime);
-		System.out.println("Completion Time " + (durationInNano / (1000000000)) + " Elements Found: " + work.size());
+		System.out.println(
+				"COMPLETION TIME " + (durationInNano / (1000000000)) + " SECONDS \t ELEMENTS FOUND: " + work.size());
 		System.out.println("SYSTEM IS READY TO PRINT OUT THOSE THAT WORKED. PRESS Y TO CONTINUE");
 		Scanner sc = new Scanner(System.in);
 		String userInput = sc.next();
@@ -68,28 +69,13 @@ public class ComboSplit {
 	}
 
 	private static long initializeTotal(int[] array) {
-		System.out.println("ArrayLength " + array.length);
-		long totalPossibilities = 0;
-		for (int index = 1; index <= array.length / 2; index++) {
-			totalPossibilities = totalPossibilities + factorial(array.length);
-			System.out.println("total possibilties " + totalPossibilities);
-		}
-		return totalPossibilities;
+		return (long) (array.length / 2) * factorial(array.length);
 	}
 
 	private static int factorial(int value) {
 		int total = 1;
 		for (int index = 1; index <= value; index++) {
 			total = total * index;
-		}
-		return total;
-	}
-
-	private static int placeFactorial(int base, int cycles) {
-		int total = 1;
-		for (int index = 0; index < cycles; index++) {
-			total = total * base;
-			base--;
 		}
 		return total;
 	}
