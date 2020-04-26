@@ -7,11 +7,11 @@ public class binarySearch {
 		// TODO Auto-generated method stub
 		int[] list = new int[99];
 		for (int number = 0; number < list.length; number++) {
-			list[number] = number * 1;
+			list[number] = number * 0;
 		}
-		list = generateRandomNumbers(100, 50, 70);
+		//list = generateRandomNumbers(100, 50, 70);
 		print(list);
-		search(list, 57);
+		search(list, 0);
 	}
 
 	public static void search(int[] source, int target) {
